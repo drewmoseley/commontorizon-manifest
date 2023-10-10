@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "microhobby.linuxkerneldev",
+        "microhobby.kgdb-debug",
+        "dpkristensen-garmin.udev-rules",
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "ms-vscode.powershell",
+        "microhobby.bitbake2",
+        "microhobby.taskrunnercodeplus",
+        "microhobby.vscode-tasks-label",
+        "joaompinto.vscode-graphviz",
+        "eamodio.gitlens",
+    ]
+}

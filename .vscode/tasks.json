@@ -101,15 +101,13 @@
         {
             "label": "repo-sync",
             "detail": "",
-            "command": "repo",
+            "command": "mkdir",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/../workdir/torizon"
             },
             "args": [
-                "sync",
-                "-j",
-                "16"
+                "layers"
             ],
             "problemMatcher": [
                 "$gcc"

@@ -1,6 +1,8 @@
 # suppress warnings that we need to use
 param()
 
+# Setup the Yocto Vscode settings file in
+#     ${workdir}/torizon/layers/.vscode/settings.json
 # check if the folder exists
 if (! (Test-Path -Path ./.vscode)) {
     New-Item -ItemType Directory -Path ./.vscode
@@ -14,23 +16,21 @@ Write-Output @"
     "bitbake.machine": "raspberrypi3-64",
     "bitbake.distro": "torizon-upstream",
     "bitbake.image": "torizon-core-docker",
-    "bitbake.buildDir": "build-torizon-upstream",
     "bitbake.setupScript": "bitbakes.sh",
     "ctags.disable": false,
     "machine": "verdin-imx8mm",
     "image": "torizon-core-docker",
     "distro": "torizon",
     "build_dir": "build-torizon",
+    "sstate_dir": "sstate-cache",
+    "dl_dir": "downloads",
 }
 "@ | Out-File ./.vscode/settings.json
 }
 
-# update the settings.json file
+# update the Yocto Vscode settings.json file
 $yoctoSettings = 
     Get-Content ./.vscode/settings.json | ConvertFrom-Json -Depth 100
-$settings = 
-    Get-Content /workspaces/commontorizon-manifest/.vscode/settings.json `
-        | ConvertFrom-Json -Depth 100
 
 # update the settings
 $yoctoSettings."bitbake.machine" = $settings.machine

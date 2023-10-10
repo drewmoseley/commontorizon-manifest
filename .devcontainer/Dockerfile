@@ -49,6 +49,7 @@ RUN groupadd -f docker && groupmod --non-unique --gid 998 docker && adduser user
 
 COPY profile.sh /usr/bin/bitbakes.sh
 COPY profile.sh /usr/bin/startup-tdx.sh
+COPY /work/dmoseley/local/torizon-ota-credentials.zip /credentials.zip 
 
 # for the kgdb serial use
 RUN chmod +x /usr/bin/bitbakes.sh && \
