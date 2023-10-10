@@ -52,7 +52,7 @@
             "command": "mkdir",
             "type": "shell",
             "options": {
-                "cwd": "/workdir"
+                "cwd": "${workspaceFolder}/../workdir"
             },
             "args": [
                 "-p",
@@ -75,7 +75,7 @@
             "command": "repo",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon"
+                "cwd": "${workspaceFolder}/../workdir/torizon"
             },
             "args": [
                 "init",
@@ -104,7 +104,7 @@
             "command": "repo",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon"
+                "cwd": "${workspaceFolder}/../workdir/torizon"
             },
             "args": [
                 "sync",
@@ -128,7 +128,7 @@
             "command": "pwsh",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon/layers"
+                "cwd": "${workspaceFolder}/../workdir/torizon/layers"
             },
             "args": [
                 "-nop",
@@ -152,7 +152,7 @@
             "command": "echo",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon"
+                "cwd": "${workspaceFolder}/../workdir/torizon"
             },
             "args": [
                 "DONE"
@@ -211,7 +211,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "ACCEPT_FSL_EULA": "1",
                     "MACHINE": "${config:machine}",
@@ -312,12 +312,12 @@
             "command": "sudo",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon"
+                "cwd": "${workspaceFolder}/../workdir/torizon"
             },
             "args": [
                 "bmaptool",
                 "copy",
-                "/workdir/torizon/build-${config:distro}/deploy/images/${config:machine}/${config:image}-${config:machine}.${config:image_format}",
+                "${workspaceFolder}/../workdir/torizon/build-${config:distro}/deploy/images/${config:machine}/${config:image}-${config:machine}.${config:image_format}",
                 "${config:flash_device}"
             ],
             "problemMatcher": [
@@ -337,13 +337,13 @@
             "command": "sudo",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon"
+                "cwd": "${workspaceFolder}/../workdir/torizon"
             },
             "args": [
                 "bmaptool",
                 "copy",
                 "--nobmap",
-                "/workdir/torizon/build-${config:distro}/deploy/images/${config:machine}/${config:image}-${config:machine}.${config:image_format}",
+                "${workspaceFolder}/../workdir/torizon/build-${config:distro}/deploy/images/${config:machine}/${config:image}-${config:machine}.${config:image_format}",
                 "${config:flash_device}"
             ],
             "problemMatcher": [
@@ -363,7 +363,7 @@
             "command": "sudo",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/"
+                "cwd": "${workspaceFolder}/../workdir/"
             },
             "args": [
                 "mkdir", "-p", "./mount",
@@ -419,7 +419,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
@@ -447,7 +447,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
@@ -475,7 +475,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
@@ -504,7 +504,7 @@
             "command": "sudo",
             "type": "shell",
             "options": {
-                //"cwd": "/workdir/torizon/build-torizon/deploy/images/qemuarm64",
+                //"cwd": "${workspaceFolder}/../workdir/torizon/build-torizon/deploy/images/qemuarm64",
                 "cwd": "/mnt/factory/build/workdir/torizon/build-torizon/deploy/images/qemuarm64",
                 "env": {
                 }
@@ -534,7 +534,7 @@
             "command": "sudo",
             "type": "shell",
             "options": {
-                //"cwd": "/workdir/torizon/build-torizon/deploy/images/qemuarm64",
+                //"cwd": "${workspaceFolder}/../workdir/torizon/build-torizon/deploy/images/qemuarm64",
                 "cwd": "/mnt/factory/build/workdir/torizon/build-torizon/deploy/images/qemuarm64",
                 "env": {
                 }
@@ -622,14 +622,14 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
                     "MACHINE": "${config:machine}",
                     "IMAGE": "${config:image}",
                     "BDDIR": "${config:build_dir}",
-                    "CMD": "bitbake ${config:image} -g && code /workdir/torizon/build-torizon-upstream/task-depends.dot"
+                    "CMD": "bitbake ${config:image} -g && code ${workspaceFolder}/../workdir/torizon/build-torizon-upstream/task-depends.dot"
                 }
             },
             "args": [
@@ -651,14 +651,14 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon/build-torizon-upstream",
+                "cwd": "${workspaceFolder}/../workdir/torizon/build-torizon-upstream",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
                     "MACHINE": "${config:machine}",
                     "IMAGE": "${config:image}",
                     "BDDIR": "${config:build_dir}",
-                    "CMD": "bitbake ${config:image} -e > envs.sh && code /workdir/torizon/build-torizon-upstream/envs.sh"
+                    "CMD": "bitbake ${config:image} -e > envs.sh && code ${workspaceFolder}/../workdir/torizon/build-torizon-upstream/envs.sh"
                 }
             },
             "args": [
@@ -741,7 +741,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
@@ -808,7 +808,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
@@ -871,7 +871,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
@@ -906,7 +906,7 @@
                 "clear": false
             },
             "args": [
-                "/workdir/torizon/layers"
+                "${workspaceFolder}/../workdir/torizon/layers"
             ],
             "problemMatcher": [
                 "$gcc"
@@ -934,7 +934,7 @@
                 "clear": false
             },
             "args": [
-                "/workdir/torizon/${config:build_dir}/tmp/work-shared/${config:machine}/kernel-source"
+                "${workspaceFolder}/../workdir/torizon/${config:build_dir}/tmp/work-shared/${config:machine}/kernel-source"
             ],
             "problemMatcher": [
                 "$gcc"
@@ -1040,7 +1040,7 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "/workdir/torizon",
+                "cwd": "${workspaceFolder}/../workdir/torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
