@@ -629,7 +629,7 @@
                     "MACHINE": "${config:machine}",
                     "IMAGE": "${config:image}",
                     "BDDIR": "${config:build_dir}",
-                    "CMD": "bitbake ${config:image} -g && code ${workspaceFolder}/../workdir/torizon/build-torizon-upstream/task-depends.dot"
+                    "CMD": "bitbake ${config:image} -g && code ${workspaceFolder}/../workdir/torizon/build-torizon/task-depends.dot"
                 }
             },
             "args": [
@@ -651,14 +651,14 @@
             "command": "${config:bitbake.setupScript}",
             "type": "shell",
             "options": {
-                "cwd": "${workspaceFolder}/../workdir/torizon/build-torizon-upstream",
+                "cwd": "${workspaceFolder}/../workdir/torizon/build-torizon",
                 "env": {
                     "EULA": "1",
                     "ACCEPT_FSL_EULA": "1",
                     "MACHINE": "${config:machine}",
                     "IMAGE": "${config:image}",
                     "BDDIR": "${config:build_dir}",
-                    "CMD": "bitbake ${config:image} -e > envs.sh && code ${workspaceFolder}/../workdir/torizon/build-torizon-upstream/envs.sh"
+                    "CMD": "bitbake ${config:image} -e > envs.sh && code ${workspaceFolder}/../workdir/torizon/build-torizon/envs.sh"
                 }
             },
             "args": [

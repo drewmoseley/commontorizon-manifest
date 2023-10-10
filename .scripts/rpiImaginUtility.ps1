@@ -45,7 +45,7 @@ function _do_stuff ($machine) {
     # first we need to convert .wic.bz to .img
     bmaptool `
         copy `
-        "${workspaceFolder}/../workdir/torizon/build-torizon-upstream/deploy/images/${machine}/torizon-core-docker-dev-${machine}.wic.bz2" `
+        "${workspaceFolder}/../workdir/torizon/build-torizon/deploy/images/${machine}/torizon-core-docker-dev-${machine}.wic.bz2" `
     ./tmp/torizon-core-docker-dev-${machine}.img
 
     # get the .img size in bytes
