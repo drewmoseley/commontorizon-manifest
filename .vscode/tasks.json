@@ -52,11 +52,11 @@
             "command": "mkdir",
             "type": "shell",
             "options": {
-                "cwd": "${workspaceFolder}/../workdir"
+                "cwd": "${workspaceFolder}"
             },
             "args": [
                 "-p",
-                "torizon"
+                "../workdir/torizon"
             ],
             "problemMatcher": [
                 "$gcc"
