@@ -8,6 +8,8 @@
     <include name="bsp/integration-rpi.xml" />
     <include name="bsp/integration-intel.xml" />
     <include name="bsp/integration-riscv.xml" />
+    <!-- no integration branch for meta-imx, so use the latest release -->
+    <include name="bsp/pinned-imx.xml" />
 
     <remote
         alias="repo"
@@ -28,13 +30,13 @@
         name="yocto-docs"
         path="layers/yocto-docs"
         remote="yocto"
-        revision="master" />
+        revision="nanbield" />
 
     <project
         name="meta-security"
         path="layers/meta-security"
         remote="yocto"
-        revision="master" />
+        revision="nanbield" />
 
     <project
         name="meta-updater"
@@ -46,7 +48,7 @@
         name="meta-virtualization"
         path="layers/meta-virtualization"
         remote="yocto"
-        revision="master" />
+        revision="nanbield" />
 
     <project
         name="meta-toradex-distro.git"
@@ -64,7 +66,7 @@
         name="meta-common-torizon"
         path="layers/meta-common-torizon"
         remote="cmt"
-        revision="master">
+        revision="nanbield">
 
         <linkfile
             dest="setup-environment"

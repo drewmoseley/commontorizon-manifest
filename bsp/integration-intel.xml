@@ -6,6 +6,6 @@
         name="meta-intel"
         path="layers/meta-intel"
         remote="yocto"
-        revision="master" />
+        revision="nanbield" />
 
 </manifest>

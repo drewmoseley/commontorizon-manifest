@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote fetch="https://github.com/nxp-imx" name="nxp-imx"/>
-  <remote fetch="https://github.com/OSSystems" name="OSSystems"/>
-  <remote fetch="https://code.qt.io/yocto"  name="QT6"/>
-  <remote fetch="https://github.com/TimesysGit"  name="Timesys"/>
-  <remote fetch="https://github.com/kraj" name="clang"/>
-  <remote fetch="https://github.com/Freescale" name="community"/>
-  <remote fetch="https://github.com/nxp-imx-support" name="imx-support"/>
+  <remote name="kraj"        fetch="https://github.com/kraj"/>
 
-  <project name="fsl-community-bsp-base" path="layers/meta-imx/base" remote="community" revision="60f79f7af60537146298560079ae603260f0bd14" upstream="kirkstone"/>
-  <project name="meta-browser" path="layers/meta-imx/meta-browser" remote="OSSystems" revision="e232c2e21b96dc092d9af8bea4b3a528e7a46dd6"/>
-  <project name="meta-clang" path="layers/meta-imx/meta-clang" remote="clang" revision="c728c3f9168c8a4ed05163a51dd48ca1ad8ac21d" upstream="kirkstone"/>
-  <project name="meta-freescale" path="layers/meta-imx/meta-freescale" remote="community" revision="c82d4634e7aba8bc0de73ce1dfc997b630051571" upstream="kirkstone"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-imx/meta-freescale-3rdparty" remote="community" revision="5977197340c7a7db17fe3e02a4e014ad997565ae" upstream="kirkstone"/>
-  <project name="meta-freescale-distro" path="layers/meta-imx/meta-freescale-distro" remote="community" revision="d5bbb487b2816dfc74984a78b67f7361ce404253" upstream="kirkstone"/>
+  <remote name="community"   fetch="https://github.com/Freescale"/>
+  <remote name="ossystems"   fetch="https://github.com/OSSystems"/>
+  <remote name="qt"          fetch="https://code.qt.io/yocto"/>
+  <remote name="timesys"     fetch="https://github.com/TimesysGit"/>
 
-  <project name="meta-imx" path="layers/meta-imx/meta-imx" remote="nxp-imx" revision="refs/tags/rel_imx_5.15.71_2.2.2" upstream="kirkstone-5.15.71-2.2.2"/>
+  <remote name="nxp-imx"     fetch="https://github.com/nxp-imx"/>
+  <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
 
-  <project name="meta-nxp-demo-experience" path="layers/meta-imx/meta-nxp-demo-experience" remote="imx-support" revision="52eaf8bf42f8eda2917a1c8c046003c8c2c8f629" upstream="kirkstone-5.15.71-2.2.0"/>
-  <project name="meta-openembedded" path="layers/meta-imx/meta-openembedded" remote="oe" revision="744a4b6eda88b9a9ca1cf0df6e18be384d9054e3" upstream="kirkstone"/>
-  <project name="meta-qt6" path="layers/meta-imx/meta-qt6" remote="QT6" revision="ed785a25d12e365d1054700d4fc94a053176eb14" upstream="6.3"/>
-  <project name="meta-timesys" path="layers/meta-imx/meta-timesys" remote="Timesys" revision="d1ad27bfacc937048e7f9084b17f4d7c917d2004" upstream="master"/>
-  <project name="meta-virtualization" path="layers/meta-imx/meta-virtualization" remote="yocto" revision="9482648daf0bb42ff3475e7892542cf99f3b8d48" upstream="master"/>
-  <project name="poky" path="layers/meta-imx/poky" remote="yocto" revision="24a3f7b3648185e33133f5d96b184a6cb6524f3d" upstream="kirkstone"/>
+  <project name="poky" remote="yocto" path="layers/meta-imx/poky" revision="046b70083f3bc9e25f547e8026400032f5c563d9" upstream="nanbield"/>
+  <project name="meta-openembedded" remote="oe" path="layers/meta-imx/meta-openembedded" revision="1750c66ae8e4268c472c0b2b94748a59d6ef866d" upstream="nanbield"/>
+  <project name="meta-clang" remote="kraj" path="layers/meta-imx/meta-clang" revision="9b08495e6bcef524789aefb6a7cc80fdfd2ff409" upstream="master"/>
+
+  <project name="fsl-community-bsp-base" remote="community" path="layers/meta-imx/base" revision="84df0b1ff416c6739472f7f7eadff04fa90d38f6" upstream="master"/>
+  <project name="meta-freescale" remote="community" path="layers/meta-imx/meta-freescale" revision="0a73d1bdd7713a6189482e463c98043c9939a2a2" upstream="master"/>
+  <project name="meta-freescale-3rdparty" remote="community" path="layers/meta-imx/meta-freescale-3rdparty" revision="7725256e3859b62f1ff201db7f2cf7026c17656d" upstream="master"/>
+  <project name="meta-freescale-distro" remote="community" path="layers/meta-imx/meta-freescale-distro" revision="4f1f101ebab5eb054bfbed10b247fc0547b30793" upstream="master"/>
+
+  <project name="meta-arm" remote="yocto" path="layers/meta-imx/meta-arm" revision="4d22f982bce8dff6f8c4d11845c47a4d39f961c6" upstream="master"/>
+  <project name="meta-qt6" remote="qt" path="layers/meta-imx/meta-qt6" revision="fd054cf5fc1b50d50cd606384ab338c6d9206437" upstream="6.5.3"/>
+  <project name="meta-browser" remote="ossystems" path="layers/meta-imx/meta-browser" revision="dc31889c0899971def535dc1c040edf18bc16691"/>
+  <project name="meta-security" remote="yocto" path="layers/meta-imx/meta-security" revision="070a1e82cc59424d230a23c0b2a104b01fbaa2ad" upstream="master"/>
+  <project name="meta-timesys" remote="timesys" path="layers/meta-imx/meta-timesys" revision="a0c1f045016fd54406888f3750c1355188ffed63" upstream="master"/>
+  <project name="meta-virtualization" remote="yocto" path="layers/meta-imx/meta-virtualization" revision="9e92984ff47b3ca2106b1d27a93af061b28d1e8a" upstream="nanbield"/>
+
+  <project name="meta-imx" remote="nxp-imx" path="layers/meta-imx/meta-imx" revision="refs/tags/rel_imx_6.6.3_1.0.0" upstream="nanbield-6.6.3-1.0.0"/>
+  <project name="meta-nxp-demo-experience" remote="imx-support" path="layers/meta-imx/meta-nxp-demo-experience" revision="nanbield-6.6.3-1.0.0" />
+
 </manifest>

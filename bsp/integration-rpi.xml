@@ -10,6 +10,6 @@
         name="meta-raspberrypi"
         path="layers/meta-raspberrypi"
         remote="agh"
-        revision="master"/>
+        revision="nanbield"/>
 
 </manifest>
