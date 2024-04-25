@@ -12,4 +12,10 @@
         remote="agh"
         revision="master"/>
 
+    <project
+        name="meta-lts-mixins.git"
+        path="layers/lts-scarthgap-uboot-mixin"
+        remote="yocto"
+        revision="scarthgap/u-boot"/>
+
 </manifest>
