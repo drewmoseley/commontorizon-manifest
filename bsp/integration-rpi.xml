@@ -3,14 +3,14 @@
 <manifest>
 
     <remote
-        fetch="https://github.com/agherzan/"
-        name="agh"/>
+        fetch="https://github.com/moto-timo/"
+        name="moto-timo"/>
 
     <project
         name="meta-raspberrypi"
         path="layers/meta-raspberrypi"
-        remote="agh"
-        revision="master"/>
+        remote="moto-timo"
+        revision="scarthgap/raspberrypi5_u-boot"/>
 
     <project
         name="meta-lts-mixins.git"
